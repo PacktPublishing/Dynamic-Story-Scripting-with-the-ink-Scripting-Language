@@ -1,0 +1,1 @@
+One out of ten runs of this shuffle will produce the number 10: {~|||||||||10}

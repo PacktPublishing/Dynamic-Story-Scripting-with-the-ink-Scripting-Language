@@ -1,0 +1,1 @@
+It was a {dark and stormy night|bright and shining day}.
