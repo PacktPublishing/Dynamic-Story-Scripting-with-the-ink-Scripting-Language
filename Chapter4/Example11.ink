@@ -1,0 +1,1 @@
+An example of a dice roll of 1-to-20 is {RANDOM(1,20)}.
