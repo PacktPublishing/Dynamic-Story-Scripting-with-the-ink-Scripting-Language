@@ -1,0 +1,1 @@
+This is an Ink template.
