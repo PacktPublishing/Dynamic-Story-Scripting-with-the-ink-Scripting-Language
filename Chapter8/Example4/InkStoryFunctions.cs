@@ -11,8 +11,9 @@ public class InkStoryFunctions : MonoBehaviour
     {
         Story localStory = new Story(InkJSONFile.text);
         if(localStory.HasFunction("increase"))
-        {
-            // Use function
-        }
+	    {
+		    localStory.EvaluateFunction("increase", 1);
+	    }
+        Debug.Log(localStory.variablesState["relationship"]);
     }
 }

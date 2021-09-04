@@ -14,9 +14,11 @@ public class InkStoryFunctions : MonoBehaviour
 	    {
 		    localStory.EvaluateFunction("increase", 1);
 	    }
-        if(localStory.variablesState.GlobalVariableExistsWithName("relationship"))
+        if(localStory.HasFunction("current"))
 	    {
-		    Debug.Log(localStory.variablesState["relationship"]);
+		    string functionOutput;
+		    localStory.EvaluateFunction("current", out functionOutput);
+		    Debug.Log(functionOutput);
 	    }
     }
 }
