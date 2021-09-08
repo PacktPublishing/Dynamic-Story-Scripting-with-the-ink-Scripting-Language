@@ -1,0 +1,1 @@
+﻿{"inkVersion":20,"root":[["^This is story A.","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"check":["ev",{"VAR?":"health"},10,">","/ev","~ret",{"#f":1}],"global decl":["ev",10,{"VAR=":"health"},"/ev","end",null],"#f":1}],"listDefs":{}}
