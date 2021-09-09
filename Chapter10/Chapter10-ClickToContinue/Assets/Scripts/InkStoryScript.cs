@@ -21,7 +21,13 @@ public class InkStoryScript : MonoBehaviour
         SpeakerNameText.text = "";
         InkOutputText.text = "";
 
-        string inkOutput = InkStory.ContinueMaximally();
+        string inkOutput = "";
+
+        if (InkStory.canContinue)
+        {
+            inkOutput = InkStory.ContinueMaximally();
+        }
+
         if (inkOutput.Contains(":"))
         {
             string[] splitInkOutput = inkOutput.Split(':');
@@ -37,7 +43,10 @@ public class InkStoryScript : MonoBehaviour
     }
     public void ProgressDialogue()
     {
-        InkStory.ChooseChoiceIndex(0);
+        if(InkStory.currentChoices.Count > 0)
+        {
+            InkStory.ChooseChoiceIndex(0);
+        }
         UpdatePanel();
     }
 }
