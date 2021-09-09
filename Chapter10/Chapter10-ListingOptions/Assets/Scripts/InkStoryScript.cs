@@ -19,7 +19,7 @@ public class InkStoryScript : MonoBehaviour
 
     void UpdateContent()
     {
-        DestoryChildren(ContentGameObject.transform);
+        DestroyChildren(ContentGameObject.transform);
         InkOutputText.text = InkStory.ContinueMaximally();
 
         foreach (Choice choice in InkStory.currentChoices)
@@ -35,7 +35,7 @@ public class InkStoryScript : MonoBehaviour
             choiceText.text = choice.text;
         }
     }
-    void DestoryChildren(Transform t)
+    void DestroyChildren(Transform t)
     {
         foreach (Transform child in t)
         {
