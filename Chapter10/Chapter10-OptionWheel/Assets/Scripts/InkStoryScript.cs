@@ -7,22 +7,23 @@ using UnityEngine.UI;
 public class InkStoryScript : MonoBehaviour
 {
     public TextAsset InkJSONFile;
-    public GameObject DialogueCanvas;
+    public GameObject OptionsPanel;
+    public Text OutputText;
     Button[] DirectionalButtons;
     Story InkStory;
     void Start()
     {
         InkStory = new Story(InkJSONFile.text);
-        DirectionalButtons = DialogueCanvas.GetComponentsInChildren<Button>();
+        DirectionalButtons = OptionsPanel.GetComponentsInChildren<Button>();
+        OutputText.text = "";
         UpdateCanvas();
     }
     void UpdateCanvas()
     {
-        RemoveAllListeners();
-
         if (InkStory.canContinue)
         {
-            InkStory.ContinueMaximally();
+            OutputText.text = InkStory.ContinueMaximally();
+
             int buttonCount = 0;
             foreach(Choice choice in InkStory.currentChoices)
             {
@@ -39,17 +40,18 @@ public class InkStoryScript : MonoBehaviour
         b.onClick.AddListener(delegate
         {
             InkStory.ChooseChoiceIndex(c.index);
+            DestroyChildren(OptionsPanel.transform);
             UpdateCanvas();
         });
 
         Text choiceText = b.GetComponentInChildren<Text>();
         choiceText.text = c.text;
     }
-    void RemoveAllListeners()
+    void DestroyChildren(Transform t)
     {
-        foreach(Button b in DirectionalButtons)
+        foreach (Transform child in t)
         {
-            b.onClick.RemoveAllListeners();
+            GameObject.Destroy(child.gameObject);
         }
     }
 }
