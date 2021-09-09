@@ -26,7 +26,7 @@ public class InkStoryScript : MonoBehaviour
 
     void UpdatePanel()
     {
-        DestoryChildren(OptionsPanel.transform);
+        DestroyChildren(OptionsPanel.transform);
         
         string inkOutput = InkStory.ContinueMaximally();
         if(inkOutput.Contains(":"))
@@ -46,6 +46,10 @@ public class InkStoryScript : MonoBehaviour
         {
             MediaText.text = InkStory.currentTags[0];
         }
+        else
+        {
+            MediaText.text = "";
+        }
 
         foreach (Choice choice in InkStory.currentChoices)
         {
@@ -60,7 +64,7 @@ public class InkStoryScript : MonoBehaviour
             choiceText.text = choice.text;
         }
     }
-    void DestoryChildren(Transform t)
+    void DestroyChildren(Transform t)
     {
         foreach (Transform child in t)
         {
