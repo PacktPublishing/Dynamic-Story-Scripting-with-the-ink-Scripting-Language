@@ -7,12 +7,13 @@ public class Dialogue : MonoBehaviour
     public Text DialogueText;
     public Button ButtonPrefab;
     public GameObject OptionsPanel;
+    public Toggle ToggleComponent;
     public Quest quest;
     string lastDialogue;
 
     public void UpdateContent()
     {
-        DestoryChildren();
+        DestroyChildren();
         
         if(quest.InkStory.canContinue)
         {
@@ -30,6 +31,7 @@ public class Dialogue : MonoBehaviour
             choiceButton.onClick.AddListener(delegate
             {
                 quest.InkStory.ChooseChoiceIndex(choice.index);
+                ToggleComponent.isOn = false;
                 UpdateContent();
             });
 
@@ -38,7 +40,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    public void DestoryChildren()
+    public void DestroyChildren()
     {
         foreach (Transform child in OptionsPanel.transform)
         {

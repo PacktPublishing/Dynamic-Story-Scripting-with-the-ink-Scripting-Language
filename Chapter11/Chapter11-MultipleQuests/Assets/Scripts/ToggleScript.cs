@@ -32,6 +32,9 @@ public class ToggleScript : MonoBehaviour
         ProgressButton.gameObject.SetActive(false);
 
         Toggle toggleComponent = GetComponent<Toggle>();
+
+        dialogue.ToggleComponent = toggleComponent;
+
         toggleComponent.onValueChanged.AddListener(delegate 
         {
             if(toggleComponent.isOn)
@@ -49,7 +52,7 @@ public class ToggleScript : MonoBehaviour
             {
                 dialogue.enabled = false;
                 ProgressButton.gameObject.SetActive(false);
-                dialogue.DestoryChildren();
+                dialogue.DestroyChildren();
             }       
         });
     }
@@ -58,7 +61,7 @@ public class ToggleScript : MonoBehaviour
         if(quest.End)
         {
             gameObject.SetActive(false);
-            dialogue.DestoryChildren();
+            dialogue.DestroyChildren();
         }    
     }
 }
