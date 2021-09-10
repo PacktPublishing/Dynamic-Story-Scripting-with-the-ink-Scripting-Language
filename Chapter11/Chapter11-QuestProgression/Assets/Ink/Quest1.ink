@@ -39,5 +39,5 @@ The old man ignores you.
 
 == progress
 ~ steps -= LIST_MIN(steps)
-~ step = LIST_MIN(step)
+~ step = LIST_MIN(steps)
 -> quest
