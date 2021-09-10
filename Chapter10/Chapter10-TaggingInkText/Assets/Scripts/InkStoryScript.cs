@@ -24,7 +24,7 @@ public class InkStoryScript : MonoBehaviour
 
     void UpdatePanel()
     {
-        DestoryChildren(OptionsPanel.transform);
+        DestroyChildren(OptionsPanel.transform);
         InkOutputText.text = InkStory.ContinueMaximally();
         SpeakerNameText.text = InkStory.currentTags[0];
 
@@ -41,7 +41,7 @@ public class InkStoryScript : MonoBehaviour
             choiceText.text = choice.text;
         }
     }
-    void DestoryChildren(Transform t)
+    void DestroyChildren(Transform t)
     {
         foreach (Transform child in t)
         {
