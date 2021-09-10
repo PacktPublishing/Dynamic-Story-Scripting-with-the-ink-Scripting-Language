@@ -4,6 +4,8 @@ VAR end = false
 
 VAR name = "Old Man's Change"
 
+VAR money = 10
+
 You meet an old man by the side of a dusty road with a wide hat set out in front of him. "Got any change?"
 * [Sure]
     -> quest
@@ -20,12 +22,14 @@ You meet an old man by the side of a dusty road with a wide hat set out in front
 
 = first
 You empty some coins from your pocket and the old man nods. "Thanks, stranger! May the gods bless you!"
+~ money -= 5
 -> DONE
 
 = second
 You encounter the same old man again a few days later. "Got any more change?"
 * [Why not?]
     "Thank you! Thank you!" the old man shouts.
+    ~ money -= 5
     -> DONE
 * [Not this time]
     -> stop

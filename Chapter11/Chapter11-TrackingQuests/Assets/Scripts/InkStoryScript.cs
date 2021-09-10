@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
-using System.Linq;
 
 public class InkStoryScript : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class InkStoryScript : MonoBehaviour
     public GameObject OptionsPanel;
     public GameObject ProgressPanel;
     public Button ProgressButtonPrefab;
-    public static Text StatisticsText;
+    public static GameObject StatisticsText;
     static List<Quest> quests;
     void Start()
     {
@@ -42,7 +41,6 @@ public class InkStoryScript : MonoBehaviour
             ts.OptionsPanel = OptionsPanel;
             ts.ProgressPanel = ProgressPanel;
             ts.ProgressButtonPrefab = ProgressButtonPrefab;
-            ts.StatisticsText = StatisticsText;
 
             questToggle.group.SetAllTogglesOff();
 
@@ -54,6 +52,8 @@ public class InkStoryScript : MonoBehaviour
     }
     public static void ShowStatistics()
     {
+        StatisticsText = GameObject.Find("/Canvas/Right/StatisticsText");
+
         Dictionary<string, object> vars = new Dictionary<string, object>();
 
         foreach (Quest q in quests)
@@ -67,9 +67,13 @@ public class InkStoryScript : MonoBehaviour
             }
         }
 
+        Text stats = StatisticsText.GetComponent<Text>();
+        stats.text = "";
+
         foreach (KeyValuePair<string, object> entry in vars)
         {
-            StatisticsText.text += entry.Key + ": " + entry.Value + "\n";
+            
+            stats.text += entry.Key + ": " + entry.Value + "\n";
         }
     }
 

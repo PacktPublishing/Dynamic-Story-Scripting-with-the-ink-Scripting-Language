@@ -609,7 +609,6 @@ MonoBehaviour:
   OptionsPanel: {fileID: 1906694045}
   ProgressPanel: {fileID: 105922833}
   ProgressButtonPrefab: {fileID: 8691208879562124575, guid: 4d9ff3bfd19f3a74089da2683ca08827, type: 3}
-  StatisticsText: {fileID: 2086172133}
 --- !u!4 &789663682
 Transform:
   m_ObjectHideFlags: 0
@@ -1300,7 +1299,7 @@ GameObject:
   - component: {fileID: 2086172134}
   - component: {fileID: 2086172133}
   m_Layer: 5
-  m_Name: Text
+  m_Name: StatisticsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1347,7 +1346,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10

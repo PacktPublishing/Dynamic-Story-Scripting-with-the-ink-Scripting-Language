@@ -4,6 +4,8 @@ VAR end = false
 
 VAR name = "Wolf's Delight"
 
+VAR stories = 0
+
 You lose a poker hand to a man in a wolf's mask. He asks that you pay in stories.
 * [Collect stories]
     -> quest
@@ -21,6 +23,7 @@ You lose a poker hand to a man in a wolf's mask. He asks that you pay in stories
 
 = first
 You collect your first story and tell the man the tale.
+~ stories += 1
 -> DONE
 
 = second
@@ -32,6 +35,7 @@ The man laughs as you finish recounting another story. "Keep the stories coming!
 
 = third
 The man in the wolf's mask looks pleased. "You are close to paying off the debt."
+~ stories += 1
 -> DONE
 
 = fourth
