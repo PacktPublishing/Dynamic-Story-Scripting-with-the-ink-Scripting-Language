@@ -5,6 +5,5 @@ The great dragon of the north stands before you with its claw extended.
 ~ violence += 10
 + [Accept its claw in greeting]
 ~ peace += 10
-
 == function check()
-~ return violence > 10
+~ return peace == 10

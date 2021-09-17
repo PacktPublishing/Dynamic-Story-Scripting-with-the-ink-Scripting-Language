@@ -33,30 +33,28 @@ public class InkStoryScript : MonoBehaviour
         }
     }
 
-    void UpdateVariables()
-    {
-        foreach(ConditionalStory s in Stories)
-        {
-            //s.InkStory.variablesState["violence"] = violence;
-            //s.InkStory.variablesState["peace"] = peace;
-        }
-    }
-
     void SelectStories()
     {
+        foreach (ConditionalStory cs in Stories)
+        {
+            cs.UpdateVariable("violence", violence);
+            cs.UpdateVariable("peace", peace);
+        }
+
         List<ConditionalStory> selection = Stories.FindAll(e => e.Available());
 
         if (selection.Count > 0)
         {
             System.Random rand = new System.Random();
             int index = rand.Next(selection.Count);
-            Story entry = selection[index].InkStory;
-            Stories.RemoveAt(index);
+            ConditionalStory entry = selection[index];
+            Stories.Remove(entry);
             UpdateContent(entry);
         }
         else
         {
             SceneDescription.text = "(There are no more stories.)";
+            StatisticsText.text = "";
         }
     }
 
@@ -65,24 +63,20 @@ public class InkStoryScript : MonoBehaviour
         StatisticsText.text = "Violence: " + violence + " | peace: " + peace;
     }
 
-    void UpdateContent(Story InkStory)
+    void UpdateContent(ConditionalStory cs)
     {
         DestroyChildren(OptionsPanel.transform);
 
-        InkStory.ObserveVariables(new List<string>() { "violence", "peace" }, (variable, value) =>
+        cs.ObserveVariables((name, value) =>
         {
-            switch (variable)
+            switch(name)
             {
                 case "violence":
-                    violence += (int)value;
-                    UpdateVariables();
+                    violence += (int) value;
                     break;
-
                 case "peace":
-                    peace += (int)value;
-                    UpdateVariables();
+                    peace += (int) value;
                     break;
-
                 default:
                     break;
             }
@@ -90,15 +84,15 @@ public class InkStoryScript : MonoBehaviour
             UpdateStatistics();
         });
 
-        SceneDescription.text = InkStory.ContinueMaximally();
+        SceneDescription.text = cs.InkStory.ContinueMaximally();
 
-        foreach (Choice choice in InkStory.currentChoices)
+        foreach (Choice choice in cs.InkStory.currentChoices)
         {
             Button choiceButton = Instantiate(ButtonPrefab, OptionsPanel.transform);
             choiceButton.onClick.AddListener(delegate
             {
-                InkStory.ChooseChoiceIndex(choice.index);
-                InkStory.Continue();
+                cs.InkStory.ChooseChoiceIndex(choice.index);
+                cs.InkStory.ContinueMaximally();
                 DestroyChildren(OptionsPanel.transform);
                 SceneDescription.text = "";
                 SelectStories();

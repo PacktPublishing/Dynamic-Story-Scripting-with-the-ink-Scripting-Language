@@ -5,6 +5,5 @@ The king is dead and his sword is next to him on the ground. By picking it up, y
 ~ violence += 10
 + [Ignore the sword]
 ~ peace += 10
-
 == function check()
-~ return violence <= 0
+~ return violence == 10
