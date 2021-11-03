@@ -15,7 +15,7 @@ This book covers the following exciting features:
 * Gain valuable insight into the ink story API to create engaging stories using the Unity plugin
 * Develop drop-in solutions to common narrative problems for Unity projects
 
-If you feel this book is for you, get your [copy](https://www.amazon.com/dp/B09DDJ8MS5) today!
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1801819327) today!
 
 <a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
 alt="https://www.packtpub.com/" border="5" /></a>
