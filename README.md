@@ -50,9 +50,9 @@ With the following software and hardware list you can run all code files present
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781801819329_ColorImages.pdf).
 
 ### Related products
-* CHands-On Unity 2021 Game Development - Second Edition [[Packt]](https://www.packtpub.com/product/hands-on-unity-2021-game-development-second-edition/9781801071482?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1801071489)
+* Hands-On Unity 2021 Game Development - Second Edition [[Packt]](https://www.packtpub.com/product/hands-on-unity-2021-game-development-second-edition/9781801071482?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1801071489)
 
-* Game Development Patterns with Unity 2021 - Second Edition [[Packt]](https://www.packtpub.com/product/game-development-patterns-with-unity-2021-second-edition/9781800200814?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/B096SXVNVP)
+* Game Development Patterns with Unity 2021 - Second Edition [[Packt]](https://www.packtpub.com/product/game-development-patterns-with-unity-2021-second-edition/9781800200814?utm_source=github&utm_medium=repository&utm_campaign=) [[Amazon]](https://www.amazon.com/dp/1800200811)
 
 
 ## Get to Know the Author
