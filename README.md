@@ -59,3 +59,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 **Daniel Cox**
 is a PhD student in Texts and Technology program and a visiting instructor in the Games and Interactive Media department at the University of Central Florida with a decade of experience creating online learning materials across interactive fiction tools such as Twine, Bitsy, and ink. He previously helped create and served as the managing editor of the Twine Cookbook for 4 years. He currently teaches game design as a full-time instructor and volunteers with the Interactive Fiction Technology Foundation
 
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781801819329">https://packt.link/free-ebook/9781801819329 </a> </p>
