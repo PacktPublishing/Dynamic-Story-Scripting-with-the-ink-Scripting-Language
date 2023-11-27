@@ -69,4 +69,4 @@ is a PhD student in Texts and Technology program and a visiting instructor in th
 
 ## Errata
 
-* Misspelling in Chapter 7: Line 53 of `InkStory.c`s should be "DestroyButtonChildren();". [This has been fixed in the online example code.](https://github.com/PacktPublishing/Dynamic-Story-Scripting-with-the-ink-Scripting-Language/commit/4008d6aba3737ccc41aeab78685e9721df43c1be)
+* Misspelling in Chapter 7: Line 53 of `InkStory.cs` should be "DestroyButtonChildren();". [This has been fixed in the online example code.](https://github.com/PacktPublishing/Dynamic-Story-Scripting-with-the-ink-Scripting-Language/commit/4008d6aba3737ccc41aeab78685e9721df43c1be)
