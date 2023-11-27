@@ -66,3 +66,7 @@ is a PhD student in Texts and Technology program and a visiting instructor in th
 
  <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
 <p align="center"> <a href="https://packt.link/free-ebook/9781801819329">https://packt.link/free-ebook/9781801819329 </a> </p>
+
+## Errata
+
+* Misspelling in Chapter 7: Line 53 of `InkStory.c`s should be "DestroyButtonChildren();". [This has been fixed in the online example code.](https://github.com/PacktPublishing/Dynamic-Story-Scripting-with-the-ink-Scripting-Language/commit/4008d6aba3737ccc41aeab78685e9721df43c1be)
