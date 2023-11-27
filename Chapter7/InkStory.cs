@@ -32,7 +32,7 @@ public class InkStory : MonoBehaviour
                 cloneButtonButton.onClick.AddListener(delegate
                 {
                     inkStory.ChooseChoiceIndex(c.index);
-                    DestoryButtonChildren();
+                    DestroyButtonChildren();
                     LoadTextAndWeave();
                 });
 
